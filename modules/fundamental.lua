@@ -111,6 +111,13 @@ next_tab = function()
     hs.eventtap.keyStroke({'cmd', 'alt'}, 'right', 20000)
 end
 
+show_all_apps = function()
+    hs.eventtap.keyStroke({'fn', 'ctrl'}, 'up', 20000)
+end
+
+show_all_windows = function()
+    hs.eventtap.keyStroke({'fn', 'ctrl'}, 'down', 20000)
+end
 
 -- down = hs.hotkey.new({}, 'd', KeyDown, nil, KeyDown)
 -- up = hs.hotkey.new({}, 'e', KeyUp, nil, KeyUp)
@@ -184,6 +191,9 @@ capslock.bind({}, 'q', Alfred)
 
 capslock.bind({"cmd"}, 's', previous_tab)
 capslock.bind({"cmd"}, 'f', next_tab)
+
+capslock.bind({}, 'up', show_all_apps)
+capslock.bind({}, 'down', show_all_windows)
 
 -- hs.hotkey.bind({'shift'}, 'x', function()
 -- hs.eventtap.keyStroke({"cmd"}, "c", 20000)
