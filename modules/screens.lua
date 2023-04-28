@@ -1,3 +1,4 @@
+capslock = require "modules/hotkey"
 ----move my mouse to another screen----
 --Predicate that checks if a window belongs to a screen
 function isInScreen(screen, win)
@@ -21,6 +22,6 @@ function switchMouse()  -- next step to switch the foucs windows too.
     local windowToFocus = #windows > 0 and windows[1] or hs.window.desktop()
     windowToFocus:focus()
 end
-capslock = require "modules/hotkey"
-switch_mouse = capslock.bind({}, ".", switchMouse)
+
+hs.hotkey.bind(capslock, ".", switchMouse)
 switch_mouse_by_mouse = hs.hotkey.bind({"ctrl"}, "0", switchMouse)
