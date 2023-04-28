@@ -18,26 +18,6 @@ key2App = {
 'iTerm2',
 'Sublime Text'
 }
--- key2App = {
---     'Finder'
--- }
-
--- key2App_event = {}
--- for index, app in pairs(key2App) do
---     -- if app == 'iTerm2'
---     event = hs.hotkey.new({}, tostring(index), function()
---         app_obj = hs.appfinder.appFromName(app)
---         if (app_obj:isFrontmost()) then
---             app_obj:hide()
---         elseif (app == "iTerm2") then
---             hs.application.launchOrFocus("iTerm")
---         else
---             hs.application.launchOrFocus(app)
---         end
---     end)
---     table.insert(key2App_event, event)
--- end
-
 capslock = require "modules/hotkey"
 
 function bind_key_to_app()
@@ -67,16 +47,3 @@ for i=1,5 do
     end)
 end
 bind_key_to_app()
-
-
--- hs.hotkey.bind({}, tostring(6), function()
---     print(hs.application.frontmostApplication())
---     print(hs.appfinder.appFromName("iTerm2"))
---     print(hs.application.launchOrFocus("iTerm"))
---     app_obj = hs.appfinder.appFromName("Finder")
---         if (app_obj:isFrontmost()) then
---             app_obj:hide()
---         else
---             hs.application.launchOrFocus("Finder")
---         end
--- end)

@@ -4,7 +4,7 @@ function capslock.bind(mod, key, pressedfn, releasedfn, repeatfn)
     _target = hs.hotkey.new(mod, key, pressedfn, releasedfn, repeatfn)
     table.insert(capslock, _target)
 
-    hs.hotkey.bind({}, 'f19', 
+    hs.hotkey.bind({}, '{"ctrl","alt","shift"}', 
         function()
             for _, _func in pairs(capslock) do
                 _func:enable()
