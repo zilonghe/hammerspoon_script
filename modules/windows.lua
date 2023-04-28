@@ -19,7 +19,7 @@ right_half_window = hs.hotkey.bind(capslock, ']', function() window.focusedWindo
 hint_windows = hs.hotkey.bind(capslock, '/', hints.windowHints)
 
 -- Hotkeys to interact with the window grid
-show_grid_windows = hs.hotkey.bind({"cmd","alt","shift"}, ',', grid.show)
+show_grid_windows = hs.hotkey.bind(capslock, ',', grid.show)
 up_windows = hs.hotkey.bind({"cmd","alt","shift"}, 'i', grid.pushWindowUp)
 left_windows = hs.hotkey.bind({"cmd","alt","shift"}, 'j', grid.pushWindowLeft)
 right_windows = hs.hotkey.bind({"cmd","alt","shift"}, 'l', grid.pushWindowRight)
